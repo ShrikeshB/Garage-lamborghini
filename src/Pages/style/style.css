@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 4em;
+}
+nav .nav-items {
+  width: 25%;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li + li {
+  margin-left: 1em;
+  opacity: 60%;
+}
+nav ul li:first-child {
+  font-weight: 600;
+}
+nav .logo {
+  overflow: hidden;
+  width: 30%;
+}
+nav .logo .img-container {
+  width: 28%;
+}
+nav .logo .img-container img {
+  width: 100%;
+}
+nav .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .search img {
+  width: 100%;
+  margin-right: 0.5em;
+}
+nav .search p {
+  font-weight: 500;
+}
+
+.divider {
+  height: 1px;
+  width: 92%;
+  background-color: black;
+}
+
+main .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 4em;
+  margin-top: 2em;
+}
+main .header .img-container {
+  width: 50%;
+}
+main .header .carLogo {
+  width: 20%;
+  float: right;
+}
+main .header img {
+  width: 100%;
+}
+main .header .right,
+main .header .left {
+  width: 30%;
+}
+main .header .content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .header .content h1 {
+  font-size: 4rem;
+}
+main .lambo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .others {
+  width: 100%;
+  padding: 4em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+  -moz-column-gap: 4em;
+       column-gap: 4em;
+}
+main .others .switcher {
+  display: flex;
+  justify-self: center;
+  align-self: flex-start;
+  margin-left: 8em;
+  margin-top: -2em;
+}
+main .others .switcher p {
+  font-weight: 600;
+}
+main .others .switcher .left,
+main .others .switcher .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .others .switcher .left {
+  opacity: 50%;
+}
+main .others .switcher .right {
+  margin-left: 1em;
+}
+main .others .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+main .others .btns button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5em;
+  margin-bottom: 1em;
+}
+main .others .btns button p {
+  font-weight: 300;
+}
+main .others .btns button img {
+  width: 15px;
+  margin-left: 0.3em;
+}
+main .others .btns p {
+  font-weight: 600;
+}
+main .others .btns .arrow {
+  position: absolute;
+  width: 20%;
+  left: 80%;
+  top: 0%;
+}
+main .others .video-container {
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  flex-direction: column;
+  margin-top: -5em;
+}
+main .others .video-container .content {
+  align-self: end;
+  text-align: right;
+}
+main .others .video-container .img-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 50%;
+  align-self: end;
+  border-bottom: 0.5em solid black;
+  overflow: hidden;
+  margin-top: 1em;
+}
+main .others .video-container .img-container img + img {
+  position: absolute;
+  z-index: 5;
+  width: 15%;
+}
+main .rec {
+  background-color: #FBA10C;
+  width: 15%;
+  height: 60vh;
+  opacity: 50%;
+  position: absolute;
+  top: 70%;
+  left: 42%;
+  z-index: -1;
+}/*# sourceMappingURL=style.css.map */

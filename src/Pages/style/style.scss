@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flexCenter() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 4em;
+
+    .nav-items {
+        width: 25%;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+
+        li+li {
+            margin-left: 1em;
+            opacity: 60%;
+        }
+
+        li:first-child {
+            font-weight: 600;
+        }
+    }
+
+    .logo {
+
+        overflow: hidden;
+        width: 30%;
+
+        .img-container {
+            width: 28%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            margin-right: .5em;
+        }
+
+        p {
+            font-weight: 500;
+        }
+    }
+}
+
+.divider {
+    height: 1px;
+    width: 92%;
+    background-color: black;
+}
+
+
+main {
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 4em;
+        margin-top: 2em;
+
+
+
+        .img-container {
+            width: 50%;
+        }
+
+        .carLogo {
+            width: 20%;
+            float: right;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .right,
+        .left {
+            width: 30%;
+        }
+
+        .left {}
+
+        .content {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    .lambo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .others {
+        width: 100%;
+        padding: 4em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-content: center;
+        column-gap: 4em;
+
+        .switcher {
+            display: flex;
+            justify-self: center;
+            align-self: flex-start;
+            margin-left: 8em;
+            margin-top: -2em;
+
+            p {
+                font-weight: 600;
+            }
+
+            .left,
+            .right {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .left {
+                opacity: 50%;
+            }
+
+            .right {
+                margin-left: 1em;
+            }
+        }
+
+        .btns {
+            @include flexCenter();
+            flex-direction: column;
+            position: relative;
+
+            button {
+                @include flexCenter();
+                background-color: black;
+                color: white;
+                padding: 1em 2em;
+                border: none;
+                border-radius: 5em;
+                margin-bottom: 1em;
+
+                p {
+                    font-weight: 300;
+                }
+
+                img {
+                    width: 15px;
+                    margin-left: .3em;
+                }
+            }
+
+            p {
+                font-weight: 600;
+            }
+
+            .arrow {
+                position: absolute;
+                width: 20%;
+                left: 80%;
+                top: 0%;
+            }
+
+
+
+        }
+
+        .video-container {
+            width: 300px;
+            height: 250px;
+            overflow: hidden;
+            @include flexCenter();
+            justify-self: end;
+            flex-direction: column;
+    margin-top: -5em;
+            .content {
+                align-self: end;
+                text-align: right;
+            }
+
+            .img-container {
+                position: relative;
+                @include flexCenter();
+                width: 70%;
+                height: 50%;
+                align-self: end;
+                border-bottom: .5em solid black;
+                overflow: hidden;
+                margin-top: 1em;
+
+                img+img {
+                    position: absolute;
+                    z-index: 5;
+
+                    width: 15%;
+                }
+            }
+        }
+    }
+
+    .rec {
+        background-color: #FBA10C;
+        width: 15%;
+        height: 60vh;
+        opacity: 50%;
+        position: absolute;
+        top: 70%;
+        left: 42%;
+        z-index: -1;
+    }
+}
